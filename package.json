@@ -1,0 +1,33 @@
+{
+  "name": "rocketx-solana",
+  "version": "1.0.0",
+  "description": "the web service to enable solana payment on rocketx",
+  "main": "index.js",
+  "scripts": {
+    "test": "rocketx",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshdgeek/Rocketx-solana.git"
+  },
+  "keywords": [
+    "rocketx"
+  ],
+  "author": "joshdgeek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joshdgeek/Rocketx-solana/issues"
+  },
+  "homepage": "https://github.com/joshdgeek/Rocketx-solana#readme",
+  "dependencies": {
+    "@solana/spl-token": "^0.4.14",
+    "@solana/web3.js": "^1.98.4",
+    "bs58": "^6.0.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
