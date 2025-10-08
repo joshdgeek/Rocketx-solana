@@ -53,8 +53,6 @@ async function sendTokens(fromAddr, destAddr, mintAddr, transferAmount) {
     console.log("Admin ATA:", adminATA.toString());
 
     //get balance
-
-
     const decimals = await getNumberDecimals(mintAddr);
 
     const factor = 10 ** decimals;
@@ -65,9 +63,8 @@ async function sendTokens(fromAddr, destAddr, mintAddr, transferAmount) {
         throw new Error("Insufficient token balance");
     }
 
-
-    const fee = 0.5 * factor;
-    console.log(fee)
+    const fee = 0.2 * factor;
+    console.log(fee);
 
     const total = transferAmount * factor;
 
@@ -93,8 +90,6 @@ async function sendTokens(fromAddr, destAddr, mintAddr, transferAmount) {
 
     return tx;
 }
-
-
 
 // Exported for use in API route
 // API route for token transfer
@@ -124,5 +119,3 @@ module.exports.transfer = async (req, res) => {
         return res.status(500).json({ error: error.message });
     }
 };
-
-
